@@ -1,0 +1,15 @@
+git checkout vaisselle
+git log --all --oneline --graph --decorate
+git rebase master
+##merge conflict in chap1.adoc
+git mergetool
+## fix conflict
+git rebase --continue
+git log --all --oneline --graph --decorate
+git checkout master
+git merge vaisselle
+git branch -D vaisselle
+git log
+##last commit is 3d00001
+git rebase -i 3d00001~1
+##“pick 810ae62” to "drop 810ae62"
